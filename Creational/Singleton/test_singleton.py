@@ -1,6 +1,4 @@
-import sys
-sys.path.append("..") # Adds higher directory to python modules path.
-from Creational.Singleton import Db
+from .Singleton import Db
 import unittest
 
 
