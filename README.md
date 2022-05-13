@@ -1,6 +1,8 @@
-# Design-Patterns 
+# Design-Patterns ⚡️
 
-This is a Project for Learning Design Patters in Python 
+This is a Project Developed in order to learn design patterns in python
+
+each type of design patterns has their own folder , test cases and README.md file so you can learn theme in a effortless way 
 
 - - - -
 
@@ -14,7 +16,7 @@ This is a Project for Learning Design Patters in Python
 
 
 - - - - 
-# Testing 
+# Testing ✅
 
   Test all files 
    
