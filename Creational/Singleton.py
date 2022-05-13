@@ -1,8 +1,3 @@
-'''
-Creational:
-    Singelton
-'''
-
 class Singleton(type):
     _instance = None
 
