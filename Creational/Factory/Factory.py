@@ -57,9 +57,7 @@ if __name__ == "__main__":
 
         -0 Mac
         -1 Iphone
-
-        ==>
-        """
+        """+"\n        ==> "
     ))
 
     Device = DeviceFactory.get_device(DeviceType)
