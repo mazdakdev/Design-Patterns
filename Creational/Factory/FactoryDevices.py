@@ -7,10 +7,25 @@ class IDevice(metaclass=ABCMeta):
 
 class DeviceMac(IDevice):
     def __init__(self):
-        self.cpu = "M1"
-        self.memory = 16
-        self.color = "Space-Gray"
-        self.storage = 512
+        self.cpu = "m1"
+        self.memory = "8" 
+        self.color = "space gray"
+        self.storage = "528"
+
+    def get_hardware(self):
+        return {
+            "CPU" : self.cpu,
+            "Memory" : self.memory,
+            "color": self.color,
+            "Storage" : self.storage
+        }
+
+class DeviceImac(IDevice):
+    def __init__(self):
+        self.cpu = "Intel core i9"
+        self.memory = "32" 
+        self.color = "space gray"
+        self.storage = "1TB"
 
     def get_hardware(self):
         return {
@@ -22,17 +37,19 @@ class DeviceMac(IDevice):
 
 class DeviceIphone(IDevice):
     def __init__(self):
-        self.cpu = "A13"
-        self.memory = 4
+        self.cpu = "A13" 
+        self.memory = "4" 
         self.color = "White"
-        self.storage = 128
-
+        self.storage = "64"
+        self.case = "Silicon"
+        
     def get_hardware(self):
         return {
             "CPU" : self.cpu,
             "Memory" : self.memory,
             "color": self.color,
-            "Storage" : self.storage
+            "Storage" : self.storage,
+            "case" : self.case,
         }
 
 class DeviceFactory():
@@ -43,7 +60,11 @@ class DeviceFactory():
                 return DeviceMac()
             
             elif device_type == 1:
+                return DeviceImac()
+
+            elif device_type == 2:
                 return DeviceIphone()
+
             raise AssertionError("Your requested Device not found !")
             
         except AssertionError as e:
@@ -56,7 +77,8 @@ if __name__ == "__main__":
         Please select your desire device below :
 
         -0 Mac
-        -1 Iphone
+        -1 IMac
+        -2 Iphone
         """+"\n        ==> "
     ))
 
